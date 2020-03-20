@@ -11,15 +11,10 @@ let dly = new p5.Delay();
 let dlygate = false;
 //sound feature variables
 let colour = {
-reda: 0,
-redb: 0,
-redc: 0,
-grna:0,
-grnb:0,
-grnc:0,
-blua:0,
-blub:0,
-bluc:0};
+a: 0,
+b: 0,
+c: 0,
+};
 //colour feature variables
 let waves = []; 
 //image array
@@ -58,24 +53,19 @@ background(255);
   ampsin = constrain(map(mouseX, height, 0, 0, 0.7), 0, 1);
   amptri = constrain(map(mouseX, height, 0, 0.7, 0), 0, 1);
 //end variables for sound parameters
-  colour.reda = constrain(map(mouseY,0,width,0,255),0, 255);
-   colour.grna = constrain(map(mouseX,0,width,0,255),0, 255);
-     colour.blua =constrain(map(mouseX+mouseY,0,width,255,0),0, 255);
-  colour.redb = constrain(map(mouseX,0,width,0,255),0, 255);
-  colour.grnb =constrain(map(mouseX+mouseY,0,width,255,0),0, 255);
-  colour.blub = constrain(map(mouseY,0,width,0,255),0, 255);
-  colour.redc =constrain(map(mouseX+mouseY,0,width,255,0),0, 255);
-  colour.grnc = constrain(map(mouseY,0,width,0,255),0, 255);
-  colour.bluc = constrain(map(mouseX,0,width,0,255),0, 255);
+  colour.a = constrain(map(mouseY,0,width,0,255),0, 255);
+   colour.b = constrain(map(mouseX,0,width,0,255),0, 255);
+     colour.c =constrain(map(mouseX+mouseY,0,width,255,0),0, 255);
+
   
   
-  fill(colour.reda, colour.grna, colour.blua, 85); 
+  fill(colour.a, colour.b, colour.c, 85); 
   ellipse(150,225,200,200);
     
-  fill(colour.redb, colour.grnb, colour.blub, 85);
+  fill(colour.b, colour.c, colour.a, 85);
    ellipse(200,150,200,200);
     
-   fill(colour.redc, colour.grnc, colour.bluc, 85);
+   fill(colour.c, colour.a, colour.b, 85);
   ellipse(250,225,200,200);
   
   //dly toggle function
